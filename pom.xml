@@ -15,8 +15,20 @@
 		</license>
 	</licenses>
 
-
-
+	<scm>
+		<connection>scm:svn:http://logback-scribe.googlecode.com/svn/trunk</connection>
+		<developerConnection>scm:svn:https://logback-scribe.googlecode.com/svn/trunk</developerConnection>
+		<url>http://logback-scribe.googlecode.com/svn/trunk</url>
+	</scm>
+	<organization>
+		<name>Bitzeche GmbH</name>
+		<url>http://www.bitzeche.de/
+		</url>
+	</organization>
+	<issueManagement>
+		<system>Google Code</system>
+		<url>http://code.google.com/p/logback-scribe/issues/</url>
+	</issueManagement>
 
 	<reporting>
 		<plugins>
@@ -31,6 +43,7 @@
 		</plugins>
 		<outputDirectory>site</outputDirectory>
 	</reporting>
+
 	<distributionManagement>
 		<repository>
 			<id>release</id>
@@ -41,10 +54,12 @@
 			<url>dav:http://svn.bitzeche.de:9080/archiva/repository/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
+
 	<properties>
 		<target.dir>target</target.dir>
 		<org.slf4j.version>1.6.1</org.slf4j.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.testng</groupId>
@@ -73,25 +88,16 @@
 
 		<dependency>
 			<groupId>com.facebook</groupId>
-			<artifactId>fb303</artifactId>
-			<version>1.0-20100729</version>
-		</dependency>
-		<dependency>
-			<groupId>com.facebook</groupId>
 			<artifactId>fb303-if</artifactId>
-			<version>1.0-20100729</version>
-		</dependency>
-		<dependency>
-			<groupId>com.facebook</groupId>
-			<artifactId>scribe-if</artifactId>
-			<version>1.0-20100729</version>
+			<version>1.0-20110126</version>
 		</dependency>
 	</dependencies>
 
 	<repositories>
 		<repository>
-			<id>facebook</id>
-			<url>http://mirror.facebook.net/maven/repository/repository/</url>
+			<id>bitzeche-release</id>
+			<name>Bitzeche Releases</name>
+			<url>http://trac.bitzeche.de/archiva/repository/release/</url>
 		</repository>
 	</repositories>
 

@@ -23,8 +23,8 @@ import org.apache.thrift.transport.TSocket;
 import org.apache.thrift.transport.TFramedTransport;
 import org.apache.thrift.transport.TTransportException;
 
-import com.facebook.infrastructure.service.LogEntry;
-import com.facebook.infrastructure.service.scribe.Client;
+import com.facebook.fb303.LogEntry;
+import com.facebook.fb303.scribe.Client;
 
 import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.core.AppenderBase;
@@ -106,7 +106,7 @@ public class ScribeAppender extends AppenderBase<ILoggingEvent> {
 
 		try {
 			String msg = layout.doLayout(loggingEvent);
-			LogEntry entry = new LogEntry(scribeCategory, msg, null);
+			LogEntry entry = new LogEntry(scribeCategory, msg);
 			logEntries.add(entry);
 			client.Log(logEntries);
 		} catch (TTransportException e) {

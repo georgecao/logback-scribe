@@ -1,0 +1,29 @@
+<configuration debug="true" scan="true" scanPeriod="5 seconds">
+	<contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+		<resetJUL>true</resetJUL>
+	</contextListener>
+
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder 
+			by default -->
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="Scribe" class="de.bitzeche.logback.scribe.ScribeAppender">
+		<hostname>remote_home</hostname>
+		<layout>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+		</layout>
+		<scribeCategory>logbacktest</scribeCategory>
+	</appender>
+
+	<logger name="de.bitzeche" level="DEBUG" />
+	<logger name="javax.enterprise.resource.webcontainer.jsf" level="INFO" />
+	<root level="DEBUG">
+		<appender-ref ref="Scribe" />
+	</root>
+</configuration>
