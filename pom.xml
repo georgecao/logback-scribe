@@ -46,11 +46,11 @@
 
 	<distributionManagement>
 		<repository>
-			<id>release</id>
+			<id>bitzeche-release</id>
 			<url>dav:http://svn.bitzeche.de:9080/archiva/repository/release/</url>
 		</repository>
 		<snapshotRepository>
-			<id>snapshots</id>
+			<id>bitzeche-snapshots</id>
 			<url>dav:http://svn.bitzeche.de:9080/archiva/repository/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
@@ -139,7 +139,6 @@
 					</execution>
 				</executions>
 			</plugin>
-
 		</plugins>
 		<extensions>
 			<extension>
