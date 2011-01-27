@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.bitzeche.logback</groupId>
 	<artifactId>logback-scribe</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<name>Scribe Logback Appender</name>
 
 	<inceptionYear>2011</inceptionYear>
@@ -15,9 +15,9 @@
 	</licenses>
 
 	<scm>
-		<connection>scm:svn:http://logback-scribe.googlecode.com/svn/tags/logback-scribe-1.0.0</connection>
-		<developerConnection>scm:svn:https://logback-scribe.googlecode.com/svn/tags/logback-scribe-1.0.0</developerConnection>
-		<url>http://logback-scribe.googlecode.com/svn/tags/logback-scribe-1.0.0</url>
+		<connection>scm:svn:http://logback-scribe.googlecode.com/svn/trunk</connection>
+		<developerConnection>scm:svn:https://logback-scribe.googlecode.com/svn/trunk</developerConnection>
+		<url>http://logback-scribe.googlecode.com/svn/trunk</url>
 	</scm>
 	<organization>
 		<name>Bitzeche GmbH</name>
